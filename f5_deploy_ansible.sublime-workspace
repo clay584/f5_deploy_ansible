@@ -11,6 +11,42 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 559,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "roles/f5_base_install/tasks/main.yml",
+			"settings":
+			{
+				"buffer_size": 1209,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "group_vars/all.yml",
+			"settings":
+			{
+				"buffer_size": 124,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "host_vars/bigip.yml",
+			"settings":
+			{
+				"buffer_size": 241,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -53,10 +89,18 @@
 	},
 	"expanded_folders":
 	[
-		"/home/vagrant/Desktop/f5_deploy_ansible"
+		"/home/vagrant/Desktop/f5_deploy_ansible",
+		"/home/vagrant/Desktop/f5_deploy_ansible/group_vars",
+		"/home/vagrant/Desktop/f5_deploy_ansible/roles",
+		"/home/vagrant/Desktop/f5_deploy_ansible/roles/f5_base_install",
+		"/home/vagrant/Desktop/f5_deploy_ansible/roles/f5_base_install/tasks"
 	],
 	"file_history":
 	[
+		"/home/vagrant/Desktop/f5_deploy_ansible/site.yml",
+		"/home/vagrant/Desktop/f5_deploy_ansible/.gitignore",
+		"/home/vagrant/Desktop/f5_deploy_ansible/hosts",
+		"/home/vagrant/Desktop/f5_deploy_ansible/roles/f5_base_install/group_vars/all.yml",
 		"/home/vagrant/Desktop/devnet-class/code-samples/module03/03-environment-03-mission/hello_lab.py",
 		"/home/vagrant/Desktop/devnet-class/code-samples/module04/04-lab05-mission/spark_mission.py",
 		"/home/vagrant/Desktop/devnet-class/.gitignore",
@@ -103,8 +147,122 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 559,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								559,
+								559
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "roles/f5_base_install/tasks/main.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1209,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1135,
+								1135
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 399.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "group_vars/all.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 124,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								82,
+								82
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "host_vars/bigip.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 241,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								190,
+								190
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/YAML/YAML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],

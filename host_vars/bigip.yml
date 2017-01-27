@@ -1,9 +1,24 @@
 ---
 
+# Management Information
 f5_hostname: "bigip.presidiolab.local"
 f5_mgmt_address: "10.126.31.150"
 f5_admin_user: "admin"
-#f5_admin_pass: "supersecretpass"
+f5_admin_pass: "admin"
 f5_root_user: "root"
-#f5_root_pass: "supersecretpass1111"
+f5_root_pass: "default"
+
+# License Keys
 f5_license_key: "PYHDB-RYNIF-CWXFO-TWMWG-SAHONNC"
+
+# DNS Information
+dns_server1: "10.10.10.10"
+dns_server2: "10.10.10.20"
+dns_search_domain: "corp.local"
+
+# NTP Information
+ntp_server1: "10.10.10.10"
+ntp_server2: "10.10.10.20"
+
+# Timezone
+f5_timezone: "America/Los_Angeles"

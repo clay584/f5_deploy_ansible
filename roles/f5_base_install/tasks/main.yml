@@ -1,17 +1,26 @@
 ---
 
-- name: Install BIG-IP License
-  bigip_command:
-    commands:
-      - "install /sys license registration-key {{ f5_license_key }}"
-    host: "{{ f5_mgmt_address }}"
-    username: "{{ f5_root_user }}"
-    password: "{{ f5_default_root_pass }}"
+#- name: Install BIG-IP License
+#  bigip_command:
+#    commands:
+#      - "install /sys license registration-key {{ f5_license_key }}"
+#    host: "{{ f5_mgmt_address }}"
+#    username: "{{ f5_root_user }}"
+#    password: "{{ f5_root_pass }}"
+
+- name: Update the current license of the BIG-IP
+  bigip_license:
+      password: "{{ f5_admin_pass }}"
+      server: "{{ f5_mgmt_address }}"
+      user: "{{ f5_admin_user }}"
+      key: "{{ f5_license_key }}"
+      state: "latest"
+  delegate_to: localhost
 
 - name: Disable the setup utility
   bigip_sys_global:
       gui_setup: "disabled"
-      password: "{{ f5_default_admin_pass }}"
+      password: "{{ f5_admin_pass }}"
       server: "{{ f5_mgmt_address }}"
       user: "{{ f5_admin_user }}"
       state: "present"
@@ -39,6 +48,37 @@
   bigip_hostname:
     server: "{{ f5_mgmt_address }}"
     user: "{{ f5_admin_user }}"
-    password: "{{ f5_default_admin_pass }}"
+    password: "{{ f5_admin_pass }}"
     hostname: "{{ f5_hostname }}"
+  delegate_to: localhost
+
+- name: Set the DNS settings on the BIG-IP
+  bigip_device_dns:
+      name_servers:
+          - "{{ dns_server1 }}"
+          - "{{ dns_server2 }}"
+      search:
+          - "{{ dns_search_domain1 }}"
+      state: present
+      password: "{{ f5_admin_pass }}"
+      server: "{{ f5_mgmt_address }}"
+      user: "{{ f5_admin_user }}"
+  delegate_to: localhost
+
+- name: Set NTP server
+  bigip_device_ntp:
+      ntp_servers:
+          - "{{ ntp_server1 }}"
+          - "{{ ntp_server2 }}"
+      password: "{{ f5_admin_pass }}"
+      server: "{{ f5_mgmt_address }}"
+      user: "{{ f5_admin_user }}"
+  delegate_to: localhost
+
+- name: Set timezone
+  bigip_device_ntp:
+      timezone: "{{ f5_timezone }}"
+      password: "{{ f5_admin_pass }}"
+      server: "{{ f5_mgmt_address }}"
+      user: "{{ f5_admin_user }}"
   delegate_to: localhost
