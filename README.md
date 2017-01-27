@@ -3,15 +3,16 @@ Deploy F5 devices with Ansible
 
 ## Installation
 
-	yum install ansible -y
-    pip install bigsuds f5-sdk
+	sudo yum install ansible -y
+    sudo pip install bigsuds f5-sdk
     git clone https://github.com/clay584/f5_deploy_ansible.git
-    cd f5_deploy_ansible
+    cd /tmp
     git clone https://github.com/F5Networks/f5-ansible.git
-    mv f5-ansible/library/* library/
-    rm -rf f5-ansible
+    mv /tmp/f5-ansible/library/* ~/f5_deploy_ansible/library/
+    rm -rf /tmp/f5-ansible
+    cd ~/f5_deploy_ansible
 
 ## Usage
 
-First, update your ./hosts file to inlcude all of the devices that you want to configure.  Then run...
+First, update the f5_deploy_ansible/hosts file to inlcude all of the devices that you want to configure.  Then run...
     ansible-playbook -i inventory.yml site.yml
