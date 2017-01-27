@@ -16,4 +16,4 @@ Deploy F5 devices with Ansible
 
 First, update the f5_deploy_ansible/hosts file to inlcude all of the devices that you want to configure.  Then run...
 
-    ansible-playbook -i inventory.yml site.yml
+    ansible-playbook -i hosts site.yml
