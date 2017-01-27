@@ -1,0 +1,9 @@
+---
+
+- name: DEPLOY F5 BIG-IP Appliances
+  hosts: bigip
+  connection: local
+
+
+  roles:
+    - f5_base_install

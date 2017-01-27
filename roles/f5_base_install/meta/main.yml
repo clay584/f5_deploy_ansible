@@ -1,0 +1,33 @@
+---
+
+allow_duplicates: no
+
+
+galaxy_info:
+  author: Clay Curtis
+  description: Deploys base configuration on F5 Big-IP devices.
+  license: 3-clause BSD license.
+  min_ansible_version: 2.2
+  platforms:
+    - name: Ubuntu
+      versions:
+        14.04
+  categories:
+    #- cloud
+    #- cloud:ec2
+    #- cloud:gce
+    #- cloud:rax
+    #- clustering
+    #- database
+    #- database:nosql
+    #- database:sql
+    #- development
+    #- monitoring
+    #- networking
+    #- packaging
+    #- system
+    #- web
+
+
+
+dependencies:

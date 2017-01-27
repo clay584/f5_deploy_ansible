@@ -1,0 +1,7 @@
+---
+
+#ansible_ssh_user: "root"
+#ansible_ssh_pass: "default"
+
+f5_default_admin_pass: "admin"
+f5_default_root_pass: "default"

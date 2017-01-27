@@ -1,0 +1,9 @@
+---
+
+f5_hostname: "bigip.presidiolab.local"
+f5_mgmt_address: "10.126.31.150"
+f5_admin_user: "admin"
+#f5_admin_pass: "supersecretpass"
+f5_root_user: "root"
+#f5_root_pass: "supersecretpass1111"
+f5_license_key: "PYHDB-RYNIF-CWXFO-TWMWG-SAHONNC"

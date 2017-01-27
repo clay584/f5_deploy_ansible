@@ -1,0 +1,44 @@
+---
+
+- name: Install BIG-IP License
+  bigip_command:
+    commands:
+      - "install /sys license registration-key {{ f5_license_key }}"
+    host: "{{ f5_mgmt_address }}"
+    username: "{{ f5_root_user }}"
+    password: "{{ f5_default_root_pass }}"
+
+- name: Disable the setup utility
+  bigip_sys_global:
+      gui_setup: "disabled"
+      password: "{{ f5_default_admin_pass }}"
+      server: "{{ f5_mgmt_address }}"
+      user: "{{ f5_admin_user }}"
+      state: "present"
+  delegate_to: localhost
+
+#- name: Set admin account password
+#  bigip_command:
+#    commands:
+#      - "modify auth user admin password {{ f5_admin_pass }}"
+#    host: "{{ f5_mgmt_address }}"
+#    username: root
+#    password: "{{ f5_default_root_pass }}"
+#  ignore_errors: yes
+
+#- name: Set admin shell to tmsh
+#  bigip_command:
+#    commands:
+#      - "modify auth user admin shell tmsh"
+#    host: "{{ f5_mgmt_address }}"
+#    username: root
+#    password: "{{ f5_default_root_pass }}"
+#  ignore_errors: yes
+
+- name: Set Hostname of the BIG-IP
+  bigip_hostname:
+    server: "{{ f5_mgmt_address }}"
+    user: "{{ f5_admin_user }}"
+    password: "{{ f5_default_admin_pass }}"
+    hostname: "{{ f5_hostname }}"
+  delegate_to: localhost
